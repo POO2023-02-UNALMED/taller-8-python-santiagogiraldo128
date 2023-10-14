@@ -6,8 +6,8 @@ class Futbolista(Persona, Deportista):
     listaFutbolistas = []
 
     def __init__(self, nombre, edad, altura, sexo, deporte = "Futbol", añosPracticando = 0, golesMarcados = 0, tarjetasRojas = 0, piernaHabil = "Derecha"):
-        super(Persona, self).__init__(nombre, edad, altura, sexo)
-        super(Deportista, self).__init__(deporte, añosPracticando)
+        super().__init__(nombre, edad, altura, sexo)
+        Deportista.__init__(self, deporte, añosPracticando)
         self._golesMarcados = golesMarcados
         self._tarjetasRojas = tarjetasRojas
         self._piernaHabil = piernaHabil
